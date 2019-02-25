@@ -5,13 +5,18 @@
           <button @click="selectedComponent='appAuthor'">Author</button>
           <button @click="selectedComponent='appNew'">New</button>
           <p>{{selectedComponent}}</p>
+           
+           <keep-alive>
+              <component v-bind:is="selectedComponent"></component>
+           </keep-alive>
+          
+       <!--
         <app-quote>
-
-         
 
           <h1 slot="title">{{quoteTitle}}</h1>
           <p slot="content">A wonderful Quote</p>
         </app-quote>
+        -->
 
         
    </div>
